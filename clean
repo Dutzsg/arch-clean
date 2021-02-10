@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+sudo rm /var/lib/pacman/db.lck
+sudo pacman -Sc
+rm -rf ~/.cache/*
+sudo pacman -Rcns $(pacman -Qdtq)
